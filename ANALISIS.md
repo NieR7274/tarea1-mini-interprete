@@ -56,14 +56,15 @@
 | `test_construye_el_arbol_de_una_suma` | Parser | Construye el AST correcto para una suma | 1 | Normal |
 | `test_la_multiplicacion_se_agrupa_antes_que_la_suma` | Parser | Agrupa la multiplicacion antes en el AST por precedencia | 2 | Normal |
 | `test_los_parentesis_cambian_la_agrupacion` | Parser | Modifica el orden de agrupacion del AST usando parentesis | 2 | Normal |
-> Llenen la tabla **completa**, con las 13. Es tediosa a propósito: la única
-> forma de saber qué no está cubierto es caracterizar sistemáticamente lo que
-> sí. Cuando terminen, léanla como columna, no como renglones, y pregúntense
-> qué combinación **no aparece nunca**.
+
+
+Se puede observar que no se encuentrar entrada invalidas en las pruebas.
 
 ### 2.2 ¿Qué comportamientos **no** estaban probados?
 
-> Ésta es la pregunta importante de toda la tarea. Tómense su tiempo.
+- **Errores de sintaxis:** No hay pruebas para cuando al usuario se le olvida cerrar un parentesis (como `(3 + 4`) o escribe cosas que no van.
+- **Dividir entre cero:** Aunque el codigo ya tiene preparado un aviso para cuando intentas dividir un numero entre cero, no se esta probando de forma automatica.
+- **Letras o simbolos raros:** Falta probar que pasa si le metes caracteres extranos que el interprete no conoce 
 
 ---
 

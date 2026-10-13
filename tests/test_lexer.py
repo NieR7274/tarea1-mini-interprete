@@ -23,3 +23,5 @@ def test_los_espacios_no_producen_tokens():
 def test_tokeniza_parentesis():
     tipos = [token.tipo for token in tokenizar("(3)")]
     assert tipos == [TipoToken.PAR_IZQ, TipoToken.NUMERO, TipoToken.PAR_DER]
+
+# Pruebas Tarea

@@ -25,3 +25,8 @@ def test_precedencia_sin_parentesis():
 
 def test_precedencia_con_parentesis():
     assert interpretar("(3 + 4) * 2") == 14
+
+# Pruebas Tarea
+
+def test_Suma_Resta():
+    assert interpretar("3 + 4 - 5") == 2

@@ -17,7 +17,6 @@
 
 ### 1.1 ¿Cuál es la responsabilidad de cada componente?
 
-### 1.1 Cual es la responsabilidad de cada componente?
 
 | Componente | Representacion |
 | :--- | :--- |
@@ -43,9 +42,20 @@
 ### 2.1 ¿Qué pruebas venían incluidas?
 
 | Prueba | Componente | Comportamiento que verifica | ¿Cuántos operadores usa? | ¿Normal, frontera o inválida? |
-|---|---|---|---|---|
-| | | | | |
-
+| :--- | :--- | :--- | :--- | :--- |
+| `test_suma` | Evaluador | Suma dos numeros enteros correctamente | 1 | Normal |
+| `test_resta` | Evaluador | Resta dos numeros enteros correctamente | 1 | Normal |
+| `test_multiplicacion` | Evaluador | Multiplica dos numeros enteros correctamente | 1 | Normal |
+| `test_division` | Evaluador | Divide dos numeros enteros correctamente | 1 | Normal |
+| `test_precedencia_sin_parentesis` | Evaluador | Respeta la precedencia de operadores | 2 | Normal |
+| `test_precedencia_con_parentesis` | Evaluador | Da prioridad a los parentesis sobre la precedencia normal | 2 | Normal |
+| `test_tokeniza_un_numero_solo` | Lexer | Tokeniza correctamente un unico numero suelto | 0 | Frontera/Pendiente |
+| `test_tokeniza_una_suma` | Lexer | Tokeniza una expresion de suma sin espacios | 1 | Normal |
+| `test_los_espacios_no_producen_tokens` | Lexer | Ignora los espacios en blanco sobrantes al tokenizar | 1 | Frontera/Pendiente |
+| `test_tokeniza_parentesis` | Lexer | Reconoce e identifica los parentesis y numeros correctamente | 0 | Frontera/Pendiente |
+| `test_construye_el_arbol_de_una_suma` | Parser | Construye el AST correcto para una suma | 1 | Normal |
+| `test_la_multiplicacion_se_agrupa_antes_que_la_suma` | Parser | Agrupa la multiplicacion antes en el AST por precedencia | 2 | Normal |
+| `test_los_parentesis_cambian_la_agrupacion` | Parser | Modifica el orden de agrupacion del AST usando parentesis | 2 | Normal |
 > Llenen la tabla **completa**, con las 13. Es tediosa a propósito: la única
 > forma de saber qué no está cubierto es caracterizar sistemáticamente lo que
 > sí. Cuando terminen, léanla como columna, no como renglones, y pregúntense

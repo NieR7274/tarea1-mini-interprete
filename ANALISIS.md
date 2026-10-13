@@ -17,12 +17,25 @@
 
 ### 1.1 ¿Cuál es la responsabilidad de cada componente?
 
-| Componente | Qué recibe | Qué entrega | De qué es responsable |
-|---|---|---|---|
-| `lexer` | | | |
-| `parser` | | | |
-| `ast` | | | |
-| `evaluator` | | | |
+- **`lexer`**
+  - **Recibe:** Cadena de texto
+  - **Entrega:** Lista de tokens
+  - **Responsabilidad:** Partir el texto plano en unidades lexicas individuales.
+
+- **`parser`**
+  - **Recibe:** Lista de tokens
+  - **Entrega:** Arbol de sintaxis abstracta (AST)
+  - **Responsabilidad:** Construir la estructura jerarquica respetando la precedencia de operadores.
+
+- **`ast`**
+  - **Recibe:** Clases/datos
+  - **Entrega:** Estructuras de nodos
+  - **Responsabilidad:** Definir los objetos logicos que representan la expresion.
+
+- **`evaluator`**
+  - **Recibe:** Nodo raiz del AST
+  - **Entrega:** Resultado numerico
+  - **Responsabilidad:** Recorrer el arbol de abajo hacia arriba para calcular el valor final.
 
 ### 1.2 ¿Qué recorrido sigue una expresión desde que se recibe como texto hasta que produce un resultado?
 

@@ -17,43 +17,26 @@
 
 ### 1.1 ¿Cuál es la responsabilidad de cada componente?
 
-- **`lexer`**
-  - **Recibe:** Cadena de texto
-  - **Entrega:** Lista de tokens
-  - **Responsabilidad:** Partir el texto plano en unidades lexicas individuales.
+### 1.1 Cual es la responsabilidad de cada componente?
 
-- **`parser`**
-  - **Recibe:** Lista de tokens
-  - **Entrega:** Arbol de sintaxis abstracta (AST)
-  - **Responsabilidad:** Construir la estructura jerarquica respetando la precedencia de operadores.
-
-- **`ast`**
-  - **Recibe:** Clases/datos
-  - **Entrega:** Estructuras de nodos
-  - **Responsabilidad:** Definir los objetos logicos que representan la expresion.
-
-- **`evaluator`**
-  - **Recibe:** Nodo raiz del AST
-  - **Entrega:** Resultado numerico
-  - **Responsabilidad:** Recorrer el arbol de abajo hacia arriba para calcular el valor final.
+| Componente | Representacion |
+| :--- | :--- |
+| **`lexer`** | **Recibe:** Cadena de texto<br>**Entrega:** Lista de tokens<br>**Responsabilidad:** Partir el texto plano en unidades lexicas individuales. |
+| **`parser`** | **Recibe:** Lista de tokens<br>**Entrega:** Arbol de sintaxis abstracta (AST)<br>**Responsabilidad:** Construir la estructura jerarquica respetando la precedencia de operadores. |
+| **`ast`** | **Recibe:** Clases/datos<br>**Entrega:** Estructuras de nodos<br>**Responsabilidad:** Definir los objetos que representan la expresion. |
+| **`evaluator`** | **Recibe:** Nodo raiz del AST<br>**Entrega:** Resultado numerico<br>**Responsabilidad:** Recorrer el arbol de abajo hacia arriba para calcular el valor final. |
 
 ### 1.2 ¿Qué recorrido sigue una expresión desde que se recibe como texto hasta que produce un resultado?
 
-> Usen `(3 + 4) * 2` como ejemplo y muestren cómo se ve entre etapa y etapa.
 
-| Etapa | Cómo se ve `(3 + 4) * 2` aquí |
-|---|---|
-| texto | `"(3 + 4) * 2"` |
-| tokens | |
-| AST | |
-| resultado | |
+### 1.2 Que recorrido sigue una expresion desde que se recibe como texto hasta que produce un resultado?
 
-> Para el renglón del AST, dibújenlo **primero ustedes** y después comprueben
-> con `python3 interprete.py --arbol "(3 + 4) * 2"`. Si su dibujo y el del
-> programa no coinciden, uno de los dos está mal, y averiguar cuál es
-> justamente el trabajo.
-
----
+| Etapa | Representacion |
+| :--- | :--- |
+| **Texto** | `"(3 + 4) * 2"` |
+| **Tokens** | `[PAR_IZQ, NUMERO(3), MAS, NUMERO(4), PAR_DER, POR, NUMERO(2)]` |
+| **AST** | `OperacionBinaria('*', OperacionBinaria('+', Numero(3), Numero(4)), Numero(2))` |
+| **Resultado** | `14` |
 
 ## 2. Las pruebas que ya estaban
 

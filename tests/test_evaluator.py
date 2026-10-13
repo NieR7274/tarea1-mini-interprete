@@ -30,3 +30,6 @@ def test_precedencia_con_parentesis():
 
 def test_Suma_Resta():
     assert interpretar("3 + 4 - 5") == 2
+
+def test_Multiplicacion_Divicion():
+    assert interpretar("5 * 6 / 3") == 10

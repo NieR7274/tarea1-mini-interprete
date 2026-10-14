@@ -46,6 +46,9 @@ class Parser:
         actual = self._actual()
         if actual is not None and actual.tipo in OPERADORES_SUMA:
             operador = self._avanzar()
+            siguiente = self._actual()
+            if siguiente is None:
+                raise ErrorDeSintaxis(f"se esperaba una expresion despues de {operador.valor!r}", operador.posicion)
             derecha = self._expresion()
             return OperacionBinaria(operador.valor, izquierda, derecha)
         return izquierda
@@ -55,6 +58,9 @@ class Parser:
         actual = self._actual()
         if actual is not None and actual.tipo in OPERADORES_PRODUCTO:
             operador = self._avanzar()
+            siguiente = self._actual()
+            if siguiente is None:
+                raise ErrorDeSintaxis(f"se esperaba una expresion despues de {operador.valor!r}", operador.posicion)
             derecha = self._termino()
             return OperacionBinaria(operador.valor, izquierda, derecha)
         return izquierda

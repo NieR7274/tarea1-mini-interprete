@@ -87,10 +87,15 @@ Se puede observar que no se encuentrar entrada invalidas en las pruebas.
 
 ### 4.1 ¿Qué defecto reveló primero una prueba nueva?
 
+### 4.1 Que defecto revelo primero una prueba nueva?
+
+La prueba de un operador incompleto (como `interpretar("3 +")`) revelo que el parser lanzaba un `IndexError`  en lugar de un `ErrorDeSintaxis` controlado cuando intentaba leer el operando derecho y se quedaba sin tokens.
+
 ### 4.2 ¿Por qué el comportamiento observado era incorrecto?
 
-> No basta con "daba mal". Digan contra qué lo están comparando: qué regla,
-> qué línea de la semántica declarada del README.
+El comportamiento anterior provocaba un `IndexError` de Python cuando faltaba el operando derecho. Esto violaba directamente la regla de la semantica declarada en el README que exige: 
+
+> "Entrada invalida debe rechazarse con ErrorDeSintaxis, nunca con un error de Python."
 
 ### 4.3 ¿Qué cambio realizaron?
 

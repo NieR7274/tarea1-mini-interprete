@@ -1,6 +1,10 @@
 """Pruebas del evaluador: del AST a un numero."""
 
+import pytest
+
 from mini_interprete.cli import interpretar
+from mini_interprete.errores import ErrorDeSintaxis
+from mini_interprete.errores import ErrorDeEvaluacion, ErrorDeSintaxis
 
 
 def test_suma():
@@ -40,3 +44,17 @@ def test_Multiplicacion_Divicion():
 
 def test_Multiples_Parentesis():
     assert interpretar("((5))") == 5
+
+    #Entradas invalidadas
+
+def test_division_por_cero():
+    with pytest.raises(ErrorDeEvaluacion, match="division entre cero"):
+        interpretar("5 / 0")
+
+def test_operador_incompleto():
+    with pytest.raises(ErrorDeSintaxis): 
+        interpretar("3 +")
+
+def test_dato_no_numerico():
+    with pytest.raises(ErrorDeSintaxis):
+        interpretar("a + b")

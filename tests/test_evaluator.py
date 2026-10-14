@@ -45,6 +45,8 @@ def test_Multiplicacion_Divicion():
 def test_Multiples_Parentesis():
     assert interpretar("((5))") == 5
 
+#faltan dos por definir
+
     #Entradas invalidadas
 
 def test_division_por_cero():

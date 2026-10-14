@@ -27,6 +27,7 @@
 
 ### 1.2 ¿Qué recorrido sigue una expresión desde que se recibe como texto hasta que produce un resultado?
 
+// cual dejamos, no probocan errores los acento?
 
 ### 1.2 Que recorrido sigue una expresion desde que se recibe como texto hasta que produce un resultado?
 
@@ -87,7 +88,6 @@ Se puede observar que no se encuentrar entrada invalidas en las pruebas.
 
 ### 4.1 ¿Qué defecto reveló primero una prueba nueva?
 
-### 4.1 Que defecto revelo primero una prueba nueva?
 
 La prueba de un operador incompleto (como `interpretar("3 +")`) revelo que el parser lanzaba un `IndexError`  en lugar de un `ErrorDeSintaxis` controlado cuando intentaba leer el operando derecho y se quedaba sin tokens.
 

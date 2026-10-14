@@ -99,12 +99,13 @@ El comportamiento anterior provocaba un `IndexError` de Python cuando faltaba el
 
 ### 4.3 ¿Qué cambio realizaron?
 
-| Defecto | Entrada que lo revela | Daba | Debería dar | Commit rojo | Commit verde |
-|---|---|---|---|---|---|
-| | | | | | |
+| Defecto | Entrada que lo revela | Daba | Deberia dar | Commit rojo | Commit verde |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Falta de validacion para operador incompleto al final de la expresion | `"3 +"` | `IndexError` (fallo interno de Python) | `ErrorDeSintaxis` controlado | `Agrega prueba de operador incompleto que falla` | `Arregla parser para lanzar ErrorDeSintaxis en operadores incompletos` |
 
 ### 4.4 ¿Cómo saben que la corrección es general y no sólo hace pasar ese ejemplo?
 
+La correccion es general porque la validacion se aplico directamente en los metodos del parser (`_expresion` y `_termino`) que procesan **cualquier** operador definido. Esto significa que no solo funciona para `"3 +"`, sino para cualquier combinacion donde un operador se quede sin su operando derecho, asegurando que siempre se lance un `ErrorDeSintaxis` controlado .
 ---
 
 ## 5. Diseño

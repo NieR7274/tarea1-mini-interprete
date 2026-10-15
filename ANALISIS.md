@@ -111,8 +111,13 @@ La correccion es general porque la validacion se aplico directamente en los meto
 
 ### 5.1 ¿Qué duplicación o señal de mal diseño encontraron?
 
-> Al menos dos. Usen el vocabulario de clase: duplicación, rigidez,
-> acoplamiento alto, condicionales repetidos, amplificación del cambio.
+1. Hay duplicación de lógica en los métodos expresion() y termino() en el analizador. Ambos tienen una estructura similar, obtienen un operando izquierdo, comprueban si el token actual es un operador válido, consumen el operador, verifican si hay una operación siguiente y crean un nodo OperacionBinaria.
+
+Es un problema, ya que si se necesita modificar la forma en que se procesan los operadores, o se manejan los errores, se necesitan modificar ambos métodos.
+
+2. La clase Nodo no tiene una interfaz común para sus subclases y las operaciones que deben poder realizar los nodos del AST. Solo es una clase base de Numero y OperacionBinario, no define métodos para evaluarlos o recorrerlos.
+
+Es un problema, ya que si se quisiera añadir algun nuevo tipo de nodo, se necesitarían modificar las funciones que recorren o procesan el árbol para reconocer el nuevo tipo de nodo. Lo cual aumenta el acoplamiento y hace más dificíl de extender sin tener que hacer muchas modificaciones.
 
 ### 5.2 ¿Qué refactorización realizaron, y por qué conserva el comportamiento?
 

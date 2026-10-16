@@ -121,8 +121,9 @@ Es un problema, ya que si se quisiera añadir algun nuevo tipo de nodo, se neces
 
 ### 5.2 ¿Qué refactorización realizaron, y por qué conserva el comportamiento?
 
-> "Las pruebas siguen pasando" es parte de la respuesta, pero no toda.
-> ¿Por qué el cambio es equivalente?
+Se creo un nuevo método auxiliar, _operación con la lógica común de _expresion() y _termino(), recibiendo como parámetros la función que analiza los operandos y los operadores que se permiten, así evitando la duplicación de lógica.
+
+Conserva el comportamiento, ya que, se mantiene la estructura al cada método seguir analizando el mismo nivel de precedencia, _expresion() usa _termino() para analizar sus operandos y reconoce sumas y restas, y _termino() usa _factor() y reconoce multiplicaciones y divisiones. Así ambos todavía mantienen sus responsabilidades y funciones, pero se evita el duplicar la lógica. También el método auxiliar realiza las mismas operaciones que los métodos originales y además las pruebas siguen pasando.
 
 ### 5.3 ¿Sería pertinente usar Factory Method, Adapter o ninguno?
 

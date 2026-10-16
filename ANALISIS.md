@@ -127,9 +127,15 @@ Conserva el comportamiento, ya que, se mantiene la estructura al cada método se
 
 ### 5.3 ¿Sería pertinente usar Factory Method, Adapter o ninguno?
 
-> Justifiquen. **"Ninguno" puede ser la respuesta correcta.** Si dicen que sí,
-> digan qué problema concreto resuelve y qué costo tiene. Si dicen que no,
-> digan qué tendría que cambiar en el sistema para que empezara a convenir.
+Consideramos que ninguno de los 2 es pertinente de usar actualmente.
+
+Para Factory Method podría usarse en la creación de los nodos del árbol, pero actualmente solo se construyen los tipos de nodo Numero y OperacionBinario y son sencillos. Añadiría complejidad pero no aportaría mucho al programa actual.
+Podría ser útil si hubieran distintas formas de crear nodos en el programa o si fuera más compleja su creación.
+
+Para Adapter se podría usar para adaptar la interfaz de un componente a lo esperado, lo que espera el intérprete, pero actualmente se generan objetos Token con lo que el parser necesita, por lo que no hay alguna incompatibilidad o algo que haga necesario usar Adapter.
+Podría ser útil si se usará algo externo que creara tokens con alguna estructura distinta y se tuvieran que convertir al formato esperado por el parser.
+
+Es decir, no consideramos que ninguno de estos patrones de diseño sean pertinentes de usar actualmente, en esta implementación, ya que no resuelven algún problema o necesidad presente, y al añadirlos se aumentaría la complejidad, añadiendo clases y más dependencias. Si después se quisiera expandir o sucediera algún cambio en el sistema como los mencionados anteriormente podrían empezar a convenir y ser útiles de implementar.
 
 ### 5.4 ¿Qué parte del sistema sería más difícil de modificar si se agregara un operador nuevo?
 

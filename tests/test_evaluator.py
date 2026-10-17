@@ -45,9 +45,12 @@ def test_Multiplicacion_Divicion():
 def test_Multiples_Parentesis():
     assert interpretar("((5))") == 5
 
-#faltan dos por definir
+def test_Resta_Positivo_Negativo():
+    assert interpretar("1 - (0-1)") == 2
 
-    #Entradas invalidadas
+def test_Multiplicacion_Negativos():
+    assert interpretar("(0-1) * (0 -1 )") == 1
+
 
 def test_division_por_cero():
     with pytest.raises(ErrorDeEvaluacion, match="division entre cero"):

@@ -78,7 +78,6 @@ Se puede observar que no se encuentrar entrada invalidas en las pruebas.
 | `tests/test_evaluator.py::test_Suma_Resta` | `"3 + 4 - 5"` | `2` | Normal | Evalua una cadena combinada de operadores de suma y resta de igual precedencia. |
 | `tests/test_evaluator.py::test_Multiplicacion_Divicion` | `"5 * 6 / 3"` | `10` | Normal | Evalua operaciones combinadas de multiplicacion y division de igual precedencia. |
 | `tests/test_evaluator.py::test_Multiples_Parentesis` | `"((5))"` | `5` | Frontera | Pone a prueba el limite estructural de anidamiento de parentesis. |
-| `tests/test_evaluator.py::test_numero_suelto` | `"42"` | `42` | Frontera | Prueba la entrada minima posible de un unico numero suelto sin operaciones. |
 | `tests/test_evaluator.py::test_Por_Definir` | `" n"` | `n` | Frontera | Inserte Texto. |
 | `tests/test_evaluator.py::test_Por_Definir` | `" n"` | `n` | Frontera | Inserte Texto. |
 | `tests/test_evaluator.py::test_operador_incompleto` | `"3 +"` | `ErrorDeSintaxis` | Invalida | Falla por falta de un operando derecho, detectando un error de sintaxis. |

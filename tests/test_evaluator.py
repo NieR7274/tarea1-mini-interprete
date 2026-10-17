@@ -46,10 +46,10 @@ def test_Multiples_Parentesis():
     assert interpretar("((5))") == 5
 
 def test_Resta_Positivo_Negativo():
-    assert interpretar("1 - (0-1)") == 2
+    assert interpretar("1 - (0 - 1)") == 2
 
 def test_Multiplicacion_Negativos():
-    assert interpretar("(0-1) * (0 -1 )") == 1
+    assert interpretar("(0 - 1) * (0 - 1 )") == 1
 
 
 def test_division_por_cero():

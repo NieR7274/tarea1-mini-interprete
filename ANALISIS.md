@@ -50,10 +50,10 @@
 | `test_division` | Evaluador | Divide dos numeros enteros correctamente | 1 | Normal |
 | `test_precedencia_sin_parentesis` | Evaluador | Respeta la precedencia de operadores | 2 | Normal |
 | `test_precedencia_con_parentesis` | Evaluador | Da prioridad a los parentesis sobre la precedencia normal | 2 | Normal |
-| `test_tokeniza_un_numero_solo` | Lexer | Tokeniza correctamente un unico numero suelto | 0 | Frontera/Pendiente |
+| `test_tokeniza_un_numero_solo` | Lexer | Tokeniza correctamente un unico numero suelto | 0 | Frontera |
 | `test_tokeniza_una_suma` | Lexer | Tokeniza una expresion de suma sin espacios | 1 | Normal |
-| `test_los_espacios_no_producen_tokens` | Lexer | Ignora los espacios en blanco sobrantes al tokenizar | 1 | Frontera/Pendiente |
-| `test_tokeniza_parentesis` | Lexer | Reconoce e identifica los parentesis y numeros correctamente | 0 | Frontera/Pendiente |
+| `test_los_espacios_no_producen_tokens` | Lexer | Ignora los espacios en blanco sobrantes al tokenizar | 1 | Frontera |
+| `test_tokeniza_parentesis` | Lexer | Reconoce e identifica los parentesis y numeros correctamente | 0 | Frontera |
 | `test_construye_el_arbol_de_una_suma` | Parser | Construye el AST correcto para una suma | 1 | Normal |
 | `test_la_multiplicacion_se_agrupa_antes_que_la_suma` | Parser | Agrupa la multiplicacion antes en el AST por precedencia | 2 | Normal |
 | `test_los_parentesis_cambian_la_agrupacion` | Parser | Modifica el orden de agrupacion del AST usando parentesis | 2 | Normal |
@@ -78,11 +78,10 @@ Se puede observar que no se encuentrar entrada invalidas en las pruebas.
 | `tests/test_evaluator.py::test_Suma_Resta` | `"3 + 4 - 5"` | `2` | Normal | Evalua una cadena combinada de operadores de suma y resta de igual precedencia. |
 | `tests/test_evaluator.py::test_Multiplicacion_Divicion` | `"5 * 6 / 3"` | `10` | Normal | Evalua operaciones combinadas de multiplicacion y division de igual precedencia. |
 | `tests/test_evaluator.py::test_Multiples_Parentesis` | `"((5))"` | `5` | Frontera | Pone a prueba el limite estructural de anidamiento de parentesis. |
-| `tests/test_evaluator.py::test_Por_Definir` | `" n"` | `n` | Frontera | Inserte Texto. |
-| `tests/test_evaluator.py::test_Por_Definir` | `" n"` | `n` | Frontera | Inserte Texto. |
+| `tests/test_evaluator.py::test_Resta_Positivo_Negativo` | `"1 - (0 - 1)"` | `2` | Frontera | Prueba restar un numero negativo usando `(0 - x)`. |
+| `tests/test_evaluator.py::test_Multiplicacion_Negativos` | `"(0 - 1) * (0 - 1 )"` | `1` | Frontera | Prueba multiplicar dos negativos `(0 - x)` con espacios extra. |
 | `tests/test_evaluator.py::test_operador_incompleto` | `"3 +"` | `ErrorDeSintaxis` | Invalida | Falla por falta de un operando derecho, detectando un error de sintaxis. |
 | `tests/test_evaluator.py::test_dato_no_numerico` | `"a + b"` | `ErrorDeSintaxis` | Invalida | Rechaza identificadores o caracteres no soportados por el lexer o parser. |
-
 ## 4. Los defectos
 
 ### 4.1 ¿Qué defecto reveló primero una prueba nueva?

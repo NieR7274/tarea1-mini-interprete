@@ -139,7 +139,12 @@ Es decir, no consideramos que ninguno de estos patrones de diseño sean pertinen
 
 ### 5.4 ¿Qué parte del sistema sería más difícil de modificar si se agregara un operador nuevo?
 
-> Por ejemplo `%`. ¿Cuántos archivos hay que tocar? ¿Por qué?
+Para poder agregar un nuevo operador como '%' se tendrían que al menos modificar y revisar lexer, parser y evaluator.
+* Para lexer se tendría que agregar % a los símbolos que reconoce el analizador léxico.
+* Para parser se tendíra que agregar % en el nivel de precedencia deseado y si tuviera la misma precedencia que algunos otros símbolos, como * y / se tendría que agregar a ese conjunto de operadores, como OPERADORES_PRODUCTO
+* Para evaluator se tendría que agregar la operación para calcular lo que hace % es decir calcular el residuo de la división, y se tendrían que definir también nuevos manejos, como al hacerlo entre cero.
+
+Tomando en cuenta esto, nosotros consideramos que la parte del sistema más difícil de modificar sería parser, ya que al agregar un nuevo operador se tendría que decidir su nivel de precedencia, como asociarse con los otros operadores. Mientras que lexer solo necesita reconocer el nuevo símbolo y evaluator el cálculo y el manejo de errores, aunque dependiendo de la complejidad del cálculo y los necesarios manejos de errores puede ser también una parte díficil de modificar.
 
 ---
 

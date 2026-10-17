@@ -105,6 +105,14 @@ El comportamiento anterior provocaba un `IndexError` de Python cuando faltaba el
 
 La correccion es general porque la validacion se aplico directamente en los metodos del parser (`_expresion` y `_termino`) que procesan **cualquier** operador definido. Esto significa que no solo funciona para `"3 +"`, sino para cualquier combinacion donde un operador se quede sin su operando derecho, asegurando que siempre se lance un `ErrorDeSintaxis` controlado .
 
+### Analisis extra
+
+Como analisis extra, se encontraron otros tres errores adicionales en el lexer al procesar ciertas entradas:
+
+1. **Numero decimal ignora el resto:** Si se ingresa un numero decimal (como `1.1`), el lexer descarta el punto decimal y los datos siguientes, devolviendo unicamente la parte entera del primer numero (`1`).
+2. **Identificador despues de numero no detectado:** Al ingresar una letra pegada o despues de un numero (como `3a + 5`), el lexer no genera error por la letra y termina evaluando solo el numero entero (`8`).
+3. **Simbolo no numerico lanza error no controlado:** Al escribir un simbolo o caracter invalido de forma aislada (como `b`), la ejecucion falla con un `IndexError` no controlado en lugar de capturarlo con `ErrorDeSintaxis`.
+
 ## 5. Diseño
 
 ### 5.1 ¿Qué duplicación o señal de mal diseño encontraron?

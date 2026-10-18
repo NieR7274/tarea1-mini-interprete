@@ -1,7 +1,9 @@
 # Declaración de uso de Inteligencia Artificial
 
 **Actividad: Tarea 1: mini interprete**
-**Integrantes: Angel Aaron López Cruz Gabriel Lugo Rosete**
+
+**Integrantes: <br> Angel Aaron Lopez Cruz <br> Gabriel Lugo Rosete**
+
 **Fecha: 19/10/2026**
 
 > Esta declaración es obligatoria en toda tarea, práctica y en el proyecto final.

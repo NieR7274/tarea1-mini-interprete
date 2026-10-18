@@ -76,8 +76,12 @@ Se les pidió intentarlo primero por su cuenta. Si lo hicieron así:
 
 |  |  |
 |---|---|
-| ¿Qué encontró la herramienta que ustedes **no** habían notado? | Se uso en el analisis extra para ver el flujo del programa y encontrar la causa del primer fallo. Ayudo a ahorrar tiempo para ver el orden exacto de por que fallaba, algo que no se noto en una revision rapida. | Se uso en el analisis de la pregunta 5.3 y encontró una explicación más centrada de porque en la implementación actual en la propuesta no sería el mejor uso Factory Method y como aun aplicandolo las operaciones tenian que ser reprsentadas por OperacionBinaria, por lo que las fábricas tenian la misma tarea. |
-| ¿Qué **no** encontró, que en este curso sí consideramos un problema? | Solo detecto el fallo para un ejemplo en especifico (`"1.1 + 1"`), dando una solucion solo para ese caso sin impartarle  que el mismo error pasaba en expresiones mas largas (como `"2 + 3 + 5.1 * 20"`) u otros casos . No vio el problema general que abarcaba mas codigo lo puedo comparar a lo dicho en clase (que una pruba pase no significa que el el programa sea correcto). | No encontró muchas más razones generales de porque Factory Method no sería pertinente actualmente fuera del ejemplo dado del uso de Factory Method y no mencionó casi cuando si podría ser útil su uso. |
+| ¿Qué encontró la herramienta que ustedes **no** habían notado? | Se uso en el analisis extra para ver el flujo del programa y encontrar la causa del primer fallo. Ayudo a ahorrar tiempo para ver el orden exacto de por que fallaba, algo que no se noto en una revision rapida.
+
+Se uso en el analisis de la pregunta 5.3 y encontró una explicación más centrada de porque en la implementación actual en la propuesta no sería el mejor uso Factory Method y como aun aplicandolo las operaciones tenian que ser reprsentadas por OperacionBinaria, por lo que las fábricas tenian la misma tarea. |
+| ¿Qué **no** encontró, que en este curso sí consideramos un problema? | Solo detecto el fallo para un ejemplo en especifico (`"1.1 + 1"`), dando una solucion solo para ese caso sin impartarle  que el mismo error pasaba en expresiones mas largas (como `"2 + 3 + 5.1 * 20"`) u otros casos . No vio el problema general que abarcaba mas codigo lo puedo comparar a lo dicho en clase (que una pruba pase no significa que el el programa sea correcto).
+
+No encontró muchas más razones generales de porque Factory Method no sería pertinente actualmente fuera del ejemplo dado del uso de Factory Method y no mencionó casi cuando si podría ser útil su uso. |
 > La segunda es la que más nos interesa. Una herramienta suele no señalar la
 > duplicación de código, porque el programa funciona igual. Ustedes ya saben
 > por qué eso sí importa.
@@ -100,7 +104,7 @@ Revisando el código y como ambas si son representadas mediante la misma clase O
 ### 5.1 ¿Qué limitación concreta observaron **en esta actividad**?
 
 
-    Si pasas un ejemplo particular para preguntar ¿Porque el programa tiene este comportamiento (Ejmplo)?, se enfoca demasiado en ese caso en particular, luego sin pedirselo te da soluciones, recomendaciones y cambios, que no son del todo correctos, no cosidera nada mas alla de responderte eso especifico en el momento. Al encontrarse mas casos desde antes, se entendio que la respuesta estaba incompleta.
+    Si pasas un ejemplo particular para preguntar ¿Porque el programa tiene este comportamiento (Ejemplo)?, se enfoca demasiado en ese caso en particular, luego sin pedirselo te da soluciones, recomendaciones y cambios, que no son del todo correctos, no cosidera nada mas alla de responderte eso especifico en el momento. Al encontrarse mas casos desde antes, se entendio que la respuesta estaba incompleta.
     Para Factory Method se enfocó demasiado en el ejemplo sobre el que se le preguntó cómo se aplicaría y cuando valdría la pena ese ejemplo específicamente, no dió una explicación o un enfoque más general.
 
     La IA puede hacerte confiar de mas en el resultado que se tiene al final.

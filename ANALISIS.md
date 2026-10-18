@@ -1,9 +1,8 @@
 # Análisis — Tarea 1
 
 **Integrantes:**
-1.
-2.
-3.
+1. Angel Aaron Lopez Cruz
+2. Gabriel Lugo Rosete
 
 **Fork:**
 **Rama:**

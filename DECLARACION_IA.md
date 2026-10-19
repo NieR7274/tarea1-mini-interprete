@@ -6,11 +6,6 @@
 
 **Fecha: 19/10/2026**
 
-> Esta declaración es obligatoria en toda tarea, práctica y en el proyecto final.
-> **No da ni quita puntos**: es un reporte adicional que se revisa aparte y se
-> devuelve con comentarios. **No se evalúa cuánta IA usaron**, sino si pueden
-> dar cuenta de lo que entregaron.
-
 ---
 
 ## 0. ¿Se usó IA en esta actividad?
@@ -26,10 +21,8 @@
 |---|---|
 | ChatGPT | GPT-6 Luna |
 
-Un integrante "uso" el autocompletado de Copilot (Simplete esta pero no se le dio utilidad.)
+Adicionalmete un integrante "uso" el autocompletado de Copilot (Simplete esta pero no se le dio utilidad.)
 
-> Cuenta también el autocompletado del editor (Copilot y similares). Si sólo
-> fue eso, basta con decirlo en un renglón y seguir al punto 4.
 
 ---
 
@@ -39,8 +32,6 @@ Un integrante "uso" el autocompletado de Copilot (Simplete esta pero no se le di
 |---|---|
 | Para verificar el uso de Factory Method y una considerción de su uso| En Analisis.md en la pregunta 5.3 |
 
-> Sean específicos. *"Para la tarea"* no dice nada.
-> *"Para generar las pruebas de `minimo_de_llaves`"* sí.
 
 ---
 
@@ -68,9 +59,6 @@ Se podría usar factory method en alguna parte del programa actulamente y que va
 |---|---|---|---|
 | Un analisis sobre Factory Method y su posible uso en el programa, al igual si era pertinente o no en el ejemplo de uso propuesto | Se aceptó su analisis sobre Factory Method y la propuesta, aunque se modificó en el analisis el uso de Factory Method o no más generalmente  | Se enfocó mucho en la propuesta del ejemplo de su uso y no era completamente claro porque sería pertinente o no el uso de Factory Method o no generalmente, por lo que se modifico para tomar otro enfoque. | En analisis.md en commit de pregunta 5.3 ¿Sería pertinente usar Factory Method, Adapter o ninguno?|
 
-> **"Lo descartamos" es una respuesta excelente**, si dicen por qué.
-> Una declaración donde todo se aceptó sin cambios es una declaración que
-> no muestra criterio.
 
 ### 4.1 Si la usaron para el análisis: el contraste
 
@@ -80,11 +68,7 @@ Se les pidió intentarlo primero por su cuenta. Si lo hicieron así:
 |---|---|
 | ¿Qué encontró la herramienta que ustedes **no** habían notado? | Se uso en el analisis extra para ver el flujo del programa y encontrar la causa del primer fallo. Ayudo a ahorrar tiempo para ver el orden exacto de por que fallaba, algo que no se noto en una revision rapida. <br><br> Se usó en el analisis de la pregunta 5.3 y encontró una explicación más centrada de porque en la implementación actual en la propuesta no sería el mejor uso Factory Method y como aun aplicandolo las operaciones tenian que ser representadas por OperacionBinaria, por lo que las fábricas tenian la misma tarea. |
 | ¿Qué **no** encontró, que en este curso sí consideramos un problema? | Solo detecto el fallo para un ejemplo en especifico (`"1.1 + 1"`), dando una solucion solo para ese caso sin impartarle  que el mismo error pasaba en expresiones mas largas (como `"2 + 3 + 5.1 * 20"`) u otros casos . No vio el problema general que abarcaba mas codigo lo puedo comparar a lo dicho en clase (que una pruba pase no significa que el el programa sea correcto).<br><br> No encontró muchas más razones generales de porque Factory Method no sería pertinente actualmente fuera del ejemplo dado del uso de Factory Method y no mencionó casi cuando si podría ser útil su uso. |
-> La segunda es la que más nos interesa. Una herramienta suele no señalar la
-> duplicación de código, porque el programa funciona igual. Ustedes ya saben
-> por qué eso sí importa.
->
-> Si no usaron IA para el análisis, escriban *"no aplica"*.
+
 
 ### 4.2 ¿Cómo verificaron que lo que incorporaron era correcto?
 
@@ -92,8 +76,6 @@ El resultado dio una serie de pasos que ejecuta el programa , se realizaron los 
 
 Revisando el código y como ambas si son representadas mediante la misma clase OperacionBinaria y junto con los apuntes de clase de cuando si es útil usar Factory Method y su propósito.
 
-> Una prueba que escribieron, una ejecución, un contraste contra las notas de
-> clase o contra el enunciado. *"Lo revisamos"* no es una verificación.
 
 ---
 
@@ -107,9 +89,6 @@ Revisando el código y como ambas si son representadas mediante la misma clase O
 
     La IA puede hacerte confiar de mas en el resultado que se tiene al final.
 
-> Concreta. No *"a veces se equivoca"*, sino *"propuso pruebas sólo para
-> m = 4 y nunca para órdenes impares, porque no conocía la definición del
-> laboratorio"*.
 
 ### 5.2 ¿Qué harían distinto la próxima vez?
 
@@ -118,8 +97,6 @@ Ser mas especifico en lo que se pide, dar mas contexto, pero lo realmente import
 
 ## Firma
 
-> Declaramos que entendemos y podemos explicar todo lo que entregamos,
-> independientemente de las herramientas que hayamos utilizado.
 
 | Nombre | Número de cuenta |
 |---|---|

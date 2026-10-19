@@ -7,9 +7,6 @@
 **Fork:**
 **Rama:**
 
-> Contesten en este archivo. Respuestas breves y concretas: se califica que
-> hayan entendido, no la extensión.
-
 ---
 
 ## 1. Arquitectura
@@ -92,7 +89,6 @@ La prueba de un operador incompleto (como `interpretar("3 +")`) revelo que el pa
 
 El comportamiento anterior provocaba un `IndexError` de Python cuando faltaba el operando derecho. Esto violaba directamente la regla de la semantica declarada en el README que exige: 
 
-> "Entrada invalida debe rechazarse con ErrorDeSintaxis, nunca con un error de Python."
 
 ### 4.3 ¿Qué cambio realizaron?
 
@@ -176,19 +172,8 @@ No es una prueba de honestidad. Es que el orden cambia lo que aprenden:
      por qué eso sí es un mal diseño, y saben nombrarlo. La herramienta no
      tomó esa clase.
 
-> Si invierten el orden se pierden justamente lo segundo: **no se puede notar
-> lo que a una herramienta le faltó si uno nunca se formó una opinión propia
-> antes de preguntarle.** Y que un programa funcione no implica que esté bien
-> diseñado — eso lo dijimos en clase mucho antes de esta tarea.
-
 ---
 
 ## Declaración de uso de Inteligencia Artificial
 
-Va en `DECLARACION_IA.md`, no aquí. Es obligatoria, pero **no da ni quita
-puntos**: es un reporte adicional que se revisa aparte y se les devuelve con
-comentarios.
-
-**No se evalúa cuánta IA usaron.** Se evalúa si pueden dar cuenta de lo que
-entregaron. *"No usamos"* es una declaración válida y completa; *"lo
-descartamos porque..."* es de las mejores respuestas posibles.
+En `DECLARACION_IA.md`

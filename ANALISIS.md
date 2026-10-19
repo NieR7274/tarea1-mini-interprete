@@ -87,7 +87,7 @@ La prueba de un operador incompleto (como `interpretar("3 +")`) revelo que el pa
 
 ### 4.2 ¿Por qué el comportamiento observado era incorrecto?
 
-El comportamiento anterior provocaba un `IndexError` de Python cuando faltaba el operando derecho. Esto violaba directamente la regla de la semantica declarada en el README que exige: 
+El comportamiento anterior provocaba un `IndexError` de Python cuando faltaba el operando derecho. Esto iba en contra de la regla de la semantica declarada en el README que exige: "Entrada invalida debe rechazarse con ErrorDeSintaxis, nunca con un error de Python."
 
 
 ### 4.3 ¿Qué cambio realizaron?

@@ -4,8 +4,9 @@
 1. Angel Aaron Lopez Cruz
 2. Gabriel Lugo Rosete
 
-**Fork:**
-**Rama:**
+**Fork: https://github.com/NieR7274/tarea1-mini-interprete**
+
+**Rama: tarea1-pruebas-refactorizacion**
 
 ---
 

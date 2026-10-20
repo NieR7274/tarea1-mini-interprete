@@ -24,10 +24,6 @@
 
 ### 1.2 ¿Qué recorrido sigue una expresión desde que se recibe como texto hasta que produce un resultado?
 
-// cual dejamos, no probocan errores los acento?
-
-### 1.2 Que recorrido sigue una expresion desde que se recibe como texto hasta que produce un resultado?
-
 | Etapa | Representacion |
 | :--- | :--- |
 | **Texto** | `"(3 + 4) * 2"` |
